@@ -1,0 +1,81 @@
+﻿// ====================================================================
+// Imports
+
+@mixin font-face($name, $type, $weight) {
+  @font-face {
+    font-family: $name;
+    src: url("fonts/#{$name}/#{$name}-#{$type}.eot");
+    src: url("fonts/#{$name}/#{$name}-#{$type}.eot?#iefix") format("embedded-opentype"), url("fonts/#{$name}/#{$name}-#{$type}.woff2") format("woff2"), url("fonts/#{$name}/#{$name}-#{$type}.woff") format("woff"), url("fonts/#{$name}/#{$name}-#{$type}.ttf") format("truetype");
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
+
+@include font-face("Montserrat", "Light", 200);
+@include font-face("Montserrat", "Regular", 400);
+@include font-face("Montserrat", "Medium", 600);
+@include font-face("Montserrat", "Bold", 800);
+@include font-face("Montserrat", "Black", 900);
+
+@include font-face("Lato", "Light", 200);
+@include font-face("Lato", "Regular", 400);
+@include font-face("Lato", "Bold", 800);
+@include font-face("Lato", "Black", 900);
+
+// ====================================================================
+// Variables
+
+$topbar-height: 70px;
+$sidebar-width: 300px;
+$font-title: "Montserrat";
+$font-text: "Lato";
+$transition: .2s all;
+
+$color-purple: #3b044c;
+
+// ==========================================================================
+// Media Queries
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait {
+  @media (max-width: #{$tablet-width - 1px}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (max-width: #{$tablet-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
