@@ -1,5 +1,12 @@
-﻿@import '_essentials.scss';
+﻿// ====================================================================
+// Imports
+
+@import '_essentials.scss';
+@import 'padding-margin.css';
 @import 'fonts/FontAwesome/css/all.min.css';
+
+// ====================================================================
+// General
 
 html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -269,3 +276,15 @@ app {
     }
   }
 }
+
+ul.nav {
+  li.nav-item {
+    i[class^=fa] {
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+// ====================================================================
+// Others
