@@ -1,5 +1,4 @@
-﻿@import url(padding-margin.css);
-@import url(fonts/FontAwesome/css/all.min.css);
+﻿@import url(fonts/FontAwesome/css/all.min.css);
 @font-face {
   font-family: "Montserrat";
   src: url("fonts/Montserrat/Montserrat-Light.eot");
@@ -64,7 +63,17 @@
   font-style: normal; }
 
 html, body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: "Montserrat"; }
+
+*[class^=col-] {
+  float: left; }
+
+h1 {
+  padding: 20px;
+  font-size: 26px;
+  margin-bottom: 0; }
+  h1 i[class^=fa] {
+    font-size: .9em; }
 
 a, a:hover, a:visited, a:active {
   text-decoration: none;
@@ -90,9 +99,12 @@ app {
 
 .main {
   flex: 1;
-  padding-top: 70px; }
+  padding-top: 70px;
+  background-color: #f1f1f1; }
+  .main .content {
+    padding: 0 !important; }
   .main .top-row {
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end; }
     .main .top-row > a, .main .top-row .main .top-row .btn-link {
@@ -143,9 +155,6 @@ app {
         right: 15px;
         color: white;
         padding: 10px 15px; } }
-
-.content {
-  padding-top: 1.1rem; }
 
 .valid.modified:not([type=checkbox]) {
   outline: 1px solid #26b050; }
@@ -254,3 +263,26 @@ app {
 ul.nav li.nav-item i[class^=fa] {
   width: 20px;
   margin-right: 10px; }
+
+::selection {
+  color: white;
+  background: #111; }
+
+.highlight {
+  color: #3b044c;
+  font-weight: 600; }
+
+.section-content {
+  padding: 15px;
+  padding-top: 0; }
+  .section-content .section-box {
+    background-color: white;
+    border-radius: 3px;
+    padding: 15px; }
+
+code {
+  color: #111;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: block;
+  border-radius: 3px; }
