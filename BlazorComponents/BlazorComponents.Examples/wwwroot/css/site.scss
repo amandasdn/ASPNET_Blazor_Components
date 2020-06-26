@@ -311,12 +311,17 @@ ul.nav {
   font-weight: 600;
 }
 
+.purple {
+  color: $color-purple;
+}
+
 // ====================================================================
 // Others
 
 .section-content {
   padding: 15px;
   padding-top: 0;
+  float: left;
 
   .section-box {
     background-color: white;
@@ -332,4 +337,38 @@ code {
   padding: 15px;
   display: block;
   border-radius: $border-radius;
+}
+
+*[class*=field-] {
+  label {
+    font-size: 10px;
+    color: lighten(desaturate($color-purple, 60%), 40%);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+
+    &.purple {
+      color: $color-purple;
+    }
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 8px 10px;
+    border-radius: 0;
+    border: 1px solid #d2d2d2;
+
+    &:focus {
+      outline: none;
+      border-color: lighten(desaturate($color-purple, 50%), 50%);
+    }
+  }
+}
+
+.preview-box {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px;
 }

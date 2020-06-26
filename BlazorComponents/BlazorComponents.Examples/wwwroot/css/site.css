@@ -195,7 +195,7 @@ app {
   app {
     flex-direction: row; }
   .sidebar {
-    width: 280px;
+    width: 250px;
     height: 100vh;
     position: sticky;
     top: 0;
@@ -225,7 +225,7 @@ app {
     .top-bar {
       position: static; } }
   .top-bar .top-title {
-    width: 280px;
+    width: 250px;
     text-align: center;
     font-family: "Montserrat"; }
     @media (min-width: 1024px) {
@@ -272,9 +272,13 @@ ul.nav li.nav-item i[class^=fa] {
   color: #3b044c;
   font-weight: 600; }
 
+.purple {
+  color: #3b044c; }
+
 .section-content {
   padding: 15px;
-  padding-top: 0; }
+  padding-top: 0;
+  float: left; }
   .section-content .section-box {
     background-color: white;
     border-radius: 3px;
@@ -286,3 +290,28 @@ code {
   padding: 15px;
   display: block;
   border-radius: 3px; }
+
+*[class*=field-] label {
+  font-size: 10px;
+  color: #a06cb0;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  display: block;
+  width: 100%; }
+  *[class*=field-] label.purple {
+    color: #3b044c; }
+
+*[class*=field-] input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 8px 10px;
+  border-radius: 0;
+  border: 1px solid #d2d2d2; }
+  *[class*=field-] input:focus {
+    outline: none;
+    border-color: #ba85cb; }
+
+.preview-box {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px; }

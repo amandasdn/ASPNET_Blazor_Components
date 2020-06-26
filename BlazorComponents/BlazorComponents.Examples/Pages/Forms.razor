@@ -1,23 +1,49 @@
 ﻿@page "/forms"
-@using BlazorComponents.Examples.Components
+@inherits FormsModel
+@using BlazorComponents.Examples.Components;
 
 <TitlePage>Forms</TitlePage>
 
-<div class="col-md-6 p-0">
-    <SectionBox>
-        <FieldText  />
+<div class="preview-box">
+    <div class="col-md-6">
+        <h5 class="highlight">FieldText</h5>
+
+        <CodeBox>
+            &lt;FieldText
+            Model=&quot;ModelName&quot;
+            Label=&quot;&#64;nameof(Obj.Property)&quot;
+            &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
+        </CodeBox>
+    </div>
+
+    <SectionBox Col="6">
+        <div class="row">
+            <FieldText Model="PersonExample" Label="@nameof(PersonObj.Name)" @bind-Value="PersonObj.Name" Col="6" />
+            <FieldText Model="PersonExample" Label="@nameof(PersonObj.Surname)" @bind-Value="PersonObj.Surname" Col="6" />
+        </div>
     </SectionBox>
+
+    <div class="clearfix" />
 </div>
 
-<div class="col-md-6">
-    <CodeBox>
-        &lt;SectionBox&gt; <br />
-        &nbsp; &nbsp; Content <br />
-        &lt;/SectionBox&gt;
-    </CodeBox>
+<div class="preview-box">
+    <div class="col-md-8">
+        <h5 class="highlight">FieldNumber</h5>
+
+        <CodeBox>
+            &lt;FieldNumber
+            Model=&quot;ModelName&quot;
+            ValueType=&quot;int&quot;
+            Label=&quot;&#64;nameof(Obj.Property)&quot;
+            &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
+        </CodeBox>
+    </div>
+
+    <SectionBox Col="4">
+        <div class="row">
+            <FieldNumber Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" Col="4" />
+        </div>
+    </SectionBox>
+
+    <div class="clearfix" />
 </div>
-
-@code {
-
-
-}
