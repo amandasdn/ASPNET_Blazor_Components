@@ -11,6 +11,17 @@
   }
 }
 
+// ====================================================================
+// Fonts
+
+@mixin fa-content($content) {
+  font-family: "Font Awesome 5 Free";
+  content: $content;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
 @include font-face("Montserrat", "Light", 200);
 @include font-face("Montserrat", "Regular", 400);
 @include font-face("Montserrat", "Medium", 600);

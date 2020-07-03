@@ -5,45 +5,61 @@
 <TitlePage>Forms</TitlePage>
 
 <div class="preview-box">
-    <div class="col-md-6">
-        <h5 class="highlight">FieldText</h5>
+    <h2>FieldText</h2>
 
-        <CodeBox>
-            &lt;FieldText
-            Model=&quot;ModelName&quot;
-            Label=&quot;&#64;nameof(Obj.Property)&quot;
-            &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
-        </CodeBox>
-    </div>
-
-    <SectionBox Col="6">
+    <SectionBox Col="12">
         <div class="row">
-            <FieldText Model="PersonExample" Label="@nameof(PersonObj.Name)" @bind-Value="PersonObj.Name" Col="6" />
-            <FieldText Model="PersonExample" Label="@nameof(PersonObj.Surname)" @bind-Value="PersonObj.Surname" Col="6" />
+            <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Name)" @bind-Value="PersonObj.Name" />
+            <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Surname)" @bind-Value="PersonObj.Surname" />
         </div>
     </SectionBox>
+
+    <CodeBox Col="12">
+        &lt;FieldText
+        Model=&quot;ModelName&quot;
+        Label=&quot;&#64;nameof(Obj.Property)&quot;
+        &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
+    </CodeBox>
 
     <div class="clearfix" />
 </div>
 
 <div class="preview-box">
-    <div class="col-md-8">
-        <h5 class="highlight">FieldNumber</h5>
+    <h2>FieldNumber</h2>
 
-        <CodeBox>
-            &lt;FieldNumber
-            Model=&quot;ModelName&quot;
-            ValueType=&quot;int&quot;
-            Label=&quot;&#64;nameof(Obj.Property)&quot;
-            &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
-        </CodeBox>
-    </div>
-
-    <SectionBox Col="4">
+    <SectionBox Col="12">
         <div class="row">
-            <FieldNumber Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" Col="4" />
+            <FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" />
         </div>
     </SectionBox>
+
+    <CodeBox Col="12">
+        &lt;FieldNumber
+        Model=&quot;ModelName&quot;
+        ValueType=&quot;int&quot;
+        Label=&quot;&#64;nameof(Obj.Property)&quot;
+        &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
+    </CodeBox>
+
+    <div class="clearfix" />
+</div>
+
+<div class="preview-box">
+    <h2>FieldDate</h2>
+
+    <SectionBox Col="12">
+        <div class="row">
+            <FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="@nameof(PersonObj.Birthday)" @bind-Value="PersonObj.Birthday" />
+        </div>
+    </SectionBox>
+
+    <CodeBox Col="12">
+        &lt;FieldDate
+        Model=&quot;ModelName&quot;
+        ValueType=&quot;DateTime&quot;
+        Label=&quot;&#64;nameof(Obj.Property)&quot;
+        &#64;bind-Value=&quot;Obj.Name&quot; Col=&quot;12&quot; /&gt;
+    </CodeBox>
 
     <div class="clearfix" />
 </div>

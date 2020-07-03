@@ -4,12 +4,16 @@
     Code Box
 *@
 
-<code>
-    @ChildContent
-</code>
+<div class="col-md-@Col">
+    <code>
+        @ChildContent
+    </code>
+</div>
 
 @code {
 
     [Parameter] public RenderFragment ChildContent { get; set; }
+
+    [Parameter] public int Col { get; set; } = 12;
 
 }

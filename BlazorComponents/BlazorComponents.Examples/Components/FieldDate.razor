@@ -1,5 +1,5 @@
 ﻿@*
-    Field Number (input type number)
+    Field Date (input type date)
 *@
 
 @typeparam Model
@@ -14,7 +14,7 @@
         </label>
     }
 
-    <input type="number" value="@Value" required="@Required" id="@ElemRef.Id"
+    <input type="date" value="@_valueStr" required="@Required" id="@ElemRef.Id"
            @attributes="AdditionalAttributes"
            @onfocus="ToggleFocus"
            @onblur="ToggleFocus"
@@ -25,7 +25,7 @@
 
 @code {
 
-    private ElementReference ElemRef = new ElementReference("fieldnumber-" + Guid.NewGuid());
+    private ElementReference ElemRef = new ElementReference("fielddate-" + Guid.NewGuid());
 
     private ValueType _value;
 
@@ -50,5 +50,14 @@
     private bool isFocus;
 
     protected void ToggleFocus() => isFocus = !isFocus;
+
+    private string _valueStr;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _valueStr = DateTimeOffset.Parse(Value.ToString()).ToString("yyyy-MM-dd") ?? string.Empty;
+    }
 
 }
