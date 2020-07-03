@@ -275,6 +275,130 @@ ul.nav li.nav-item i[class^=fa] {
 .purple {
   color: #3b044c; }
 
+.btn-component {
+  font-family: "Lato";
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  vertical-align: middle;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-size: 12px;
+  padding: 9px 16px; }
+  .btn-component:focus {
+    outline: none; }
+  .btn-component.btn-component-red {
+    color: white;
+    background: #ff3535;
+    text-shadow: 0px 2px #ce0000;
+    border: 1px solid #ff3535; }
+    .btn-component.btn-component-red.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #ff3535; }
+      .btn-component.btn-component-red.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-red:hover {
+      background: #ff1c1c;
+      border-color: #ff0202; }
+    .btn-component.btn-component-red:active {
+      background: #ce0000;
+      border-color: #9b0000;
+      color: white; }
+  .btn-component.btn-component-pink {
+    color: white;
+    background: #f45489;
+    text-shadow: 0px 2px #d40e4f;
+    border: 1px solid #f45489; }
+    .btn-component.btn-component-pink.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #f45489; }
+      .btn-component.btn-component-pink.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-pink:hover {
+      background: #f23c78;
+      border-color: #f12468; }
+    .btn-component.btn-component-pink:active {
+      background: #d40e4f;
+      border-color: #a40b3e;
+      color: white; }
+  .btn-component.btn-component-blue {
+    color: white;
+    background: #4385f5;
+    text-shadow: 0px 2px #0b51c7;
+    border: 1px solid #4385f5; }
+    .btn-component.btn-component-blue.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #4385f5; }
+      .btn-component.btn-component-blue.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-blue:hover {
+      background: #2b75f4;
+      border-color: #1366f2; }
+    .btn-component.btn-component-blue:active {
+      background: #0b51c7;
+      border-color: #083d97;
+      color: white; }
+  .btn-component.btn-component-green {
+    color: white;
+    background: #10ba88;
+    text-shadow: 0px 2px #085c43;
+    border: 1px solid #10ba88; }
+    .btn-component.btn-component-green.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #10ba88; }
+      .btn-component.btn-component-green.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-green:hover {
+      background: #0ea377;
+      border-color: #0c8b66; }
+    .btn-component.btn-component-green:active {
+      background: #085c43;
+      border-color: #042d21;
+      color: white; }
+  .btn-component.btn-component-orange {
+    color: white;
+    background: #ff8800;
+    text-shadow: 0px 2px #995200;
+    border: 1px solid #ff8800; }
+    .btn-component.btn-component-orange.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #ff8800; }
+      .btn-component.btn-component-orange.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-orange:hover {
+      background: #e67a00;
+      border-color: #cc6d00; }
+    .btn-component.btn-component-orange:active {
+      background: #995200;
+      border-color: #663600;
+      color: white; }
+  .btn-component.btn-component-yellow {
+    color: white;
+    background: #ffc629;
+    text-shadow: 0px 2px #c28e00;
+    border: 1px solid #ffc629; }
+    .btn-component.btn-component-yellow.btn-component-outline {
+      background: transparent;
+      text-shadow: none;
+      color: #ffc629; }
+      .btn-component.btn-component-yellow.btn-component-outline:hover {
+        color: white; }
+    .btn-component.btn-component-yellow:hover {
+      background: #ffbf10;
+      border-color: #f5b400; }
+    .btn-component.btn-component-yellow:active {
+      background: #c28e00;
+      border-color: #8f6900;
+      color: white; }
+  .btn-component i[class^=fa] {
+    margin-right: 5px;
+    font-size: 1.1em; }
+
 .section-content {
   padding: 15px;
   padding-top: 0;

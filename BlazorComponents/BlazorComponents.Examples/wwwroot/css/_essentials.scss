@@ -38,14 +38,51 @@
 
 $topbar-height: 70px;
 $sidebar-width: 250px;
-$font-title: "Montserrat";
-$font-text: "Lato";
+$font-montserrat: "Montserrat";
+$font-lato: "Lato";
 $transition: .2s all;
 $border-radius: 3px;
 
+$color-red: #ff3535;
+$color-green: #10ba88;
+$color-blue: #4385f5;
+$color-orange: #ff8800;
+$color-yellow: #ffc629;
+$color-pink: #f45489;
 $color-purple: #3b044c;
 $color-gray-light: #f1f1f1;
-$color-gray-medium: #d4d4d4;
+$color-gray: #d4d4d4;
+
+// ==========================================================================
+// Buttons
+
+@mixin button($color) {
+  color: white;
+  background: $color;
+  text-shadow: 0px 2px darken($color, 20%);
+  border: 1px solid $color;
+
+  &.btn-component-outline {
+    background: transparent;
+    text-shadow: none;
+    color: $color;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+    border-color: darken($color, 10%)
+  }
+
+  &:active {
+    background: darken($color, 20%);
+    border-color: darken($color, 30%); 
+    color: white;
+  }
+}
 
 // ==========================================================================
 // Media Queries

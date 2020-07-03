@@ -7,14 +7,12 @@
 <div class="preview-box">
     <h2>FieldText</h2>
 
-    <SectionBox Col="12">
-        <div class="row">
-            <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Name)" @bind-Value="PersonObj.Name" />
-            <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Surname)" @bind-Value="PersonObj.Surname" />
-        </div>
+    <SectionBox HasRow="true">
+        <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Name)" @bind-Value="PersonObj.Name" />
+        <FieldText Col="3" Model="PersonExample" Label="@nameof(PersonObj.Surname)" @bind-Value="PersonObj.Surname" />
     </SectionBox>
 
-    <CodeBox Col="12">
+    <CodeBox>
         &lt;FieldText
         Model=&quot;ModelName&quot;
         Label=&quot;&#64;nameof(Obj.Property)&quot;
@@ -27,13 +25,13 @@
 <div class="preview-box">
     <h2>FieldNumber</h2>
 
-    <SectionBox Col="12">
+    <SectionBox>
         <div class="row">
             <FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" />
         </div>
     </SectionBox>
 
-    <CodeBox Col="12">
+    <CodeBox>
         &lt;FieldNumber
         Model=&quot;ModelName&quot;
         ValueType=&quot;int&quot;
@@ -47,13 +45,13 @@
 <div class="preview-box">
     <h2>FieldDate</h2>
 
-    <SectionBox Col="12">
+    <SectionBox>
         <div class="row">
             <FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="@nameof(PersonObj.Birthday)" @bind-Value="PersonObj.Birthday" />
         </div>
     </SectionBox>
 
-    <CodeBox Col="12">
+    <CodeBox>
         &lt;FieldDate
         Model=&quot;ModelName&quot;
         ValueType=&quot;DateTime&quot;

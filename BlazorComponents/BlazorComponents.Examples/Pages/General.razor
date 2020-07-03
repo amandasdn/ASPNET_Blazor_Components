@@ -3,21 +3,58 @@
 
 <TitlePage>General</TitlePage>
 
-<div class="col-md-6 p-0">
+<div class="preview-box">
+    <h2>SectionBox</h2>
+
     <SectionBox>
         This is a section.
     </SectionBox>
-</div>
 
-<div class="col-md-6">
     <CodeBox>
-        &lt;SectionBox&gt; <br />
+        &lt;SectionBox Col="12" HasRow="false" HasBox="true"&gt; <br />
         &nbsp; &nbsp; Content <br />
         &lt;/SectionBox&gt;
     </CodeBox>
+
+    <div class="clearfix" />
 </div>
 
-@code {
+<div class="preview-box">
+    <h2>Button</h2>
 
+    <SectionBox>
+        <Button Text="red" Color="red" />
+        <Button Text="pink" Color="pink" />
+        <Button Text="blue" Color="blue" />
+        <Button Text="green" Color="green" />
+        <Button Text="orange" Color="orange" />
+        <Button Text="yellow" Color="yellow" CssClass="mr-2" />
 
-}
+        <Button Text="red" Color="red" Outline="true" />
+        <Button Text="pink" Color="pink" Outline="true" />
+        <Button Text="blue" Color="blue" Outline="true" />
+        <Button Text="green" Color="green" Outline="true" />
+        <Button Text="orange" Color="orange" Outline="true" />
+        <Button Text="yellow" Color="yellow" Outline="true" CssClass="mr-2" />
+
+        <Button Text="red" Color="red" Icon="apple-alt" />
+        <Button Text="pink" Color="pink" Icon="heart" />
+        <Button Text="blue" Color="blue" Icon="cloud" />
+        <Button Text="green" Color="green" Icon="leaf" />
+        <Button Text="orange" Color="orange" Icon="carrot" />
+        <Button Text="yellow" Color="yellow" Icon="sun" />
+    </SectionBox>
+
+    <CodeBox>
+        &lt;Button
+        Text=&quot;Test&quot;
+        Color=&quot;red&quot;
+        Outline=&quot;none&quot;
+        Icon=&quot;heart&quot;
+        CssClass=&quot;additional-class&quot;
+        Disabled=&quot;false&quot;
+        /&gt;
+    </CodeBox>
+
+    <div class="clearfix" />
+</div>

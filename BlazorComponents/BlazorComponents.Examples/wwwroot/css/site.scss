@@ -8,7 +8,7 @@
 // General
 
 html, body {
-  font-family: $font-title;
+  font-family: $font-montserrat;
 }
 
 *[class^=col-]{
@@ -18,7 +18,7 @@ html, body {
 h1 {
   padding: 20px;
   font-size: 26px;
-  // border-bottom: 1px solid $color-gray-medium;
+  // border-bottom: 1px solid $color-gray;
   margin-bottom: 0;
 
   i[class^=fa] {
@@ -244,7 +244,7 @@ app {
   .top-title {
     width: $sidebar-width;
     text-align: center;
-    font-family: $font-title;
+    font-family: $font-montserrat;
 
     @include desktop {
       float: left;
@@ -317,6 +317,51 @@ ul.nav {
 
 // ====================================================================
 // Others
+
+.btn-component {
+  font-family: $font-lato;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  vertical-align: middle;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-size: 12px;
+  padding: 9px 16px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.btn-component-red {
+    @include button($color-red);
+  }
+
+  &.btn-component-pink {
+    @include button($color-pink);
+  }
+
+  &.btn-component-blue {
+    @include button($color-blue);
+  }
+
+  &.btn-component-green {
+    @include button($color-green);
+  }
+
+  &.btn-component-orange {
+    @include button($color-orange);
+  }
+
+  &.btn-component-yellow {
+    @include button($color-yellow);
+  }
+
+  i[class^=fa] {
+    margin-right: 5px;
+    font-size: 1.1em;
+  }
+}
 
 .section-content {
   padding: 15px;
