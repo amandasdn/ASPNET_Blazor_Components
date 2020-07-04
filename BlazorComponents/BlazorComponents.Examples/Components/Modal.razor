@@ -1,0 +1,48 @@
+﻿@*
+    Modal
+*@
+
+@inject IJSRuntime JsRunTime;
+
+@if (!Hidden)
+{
+    <div class="@($"modal-box {CssClass}")">
+
+        @if (CloseOut)
+        {
+            <div class="black-overlay" />
+        }
+        else
+        {
+            <div class="black-overlay" />
+        }
+
+        <SectionBox>
+            <h3>@Title</h3>
+
+            @ChildContent
+
+            @if (BtnClose)
+            {
+                <div class="btn-close" />
+            }
+        </SectionBox>
+
+    </div>
+}
+
+@code {
+
+    public bool Hidden { get; set; } = true;
+
+    [Parameter] public string Title { get; set; }
+    [Parameter] public bool CloseOut { get; set; }
+    [Parameter] public bool BtnClose { get; set; }
+
+    [Parameter] public string CssClass { get; set; }
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    [Parameter] public EventCallback OnClose { get; set; } = new EventCallback();
+
+}
