@@ -36,6 +36,9 @@ else
 
     private string _cssClass => $"btn-component btn-component-{Color} {(Outline ? "btn-component-outline" : "")} {CssClass}";
 
+    /// <summary>
+    /// button, submit, reset
+    /// </summary>
     [Parameter] public string Type { get; set; } = "button";
 
     [Parameter] public string Text { get; set; }
@@ -49,6 +52,9 @@ else
     /// </summary>
     [Parameter] public string Color { get; set; }
 
+    /// <summary>
+    /// NavLink
+    /// </summary>
     [Parameter] public string Url { get; set; }
 
     [Parameter(CaptureUnmatchedValues = true)]

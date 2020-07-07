@@ -9,6 +9,6 @@ namespace BlazorComponents.Examples.Pages
 {
     public class GeneralModel : LayoutComponentBase
     {
-        public Modal ModalExample;
+        public Modal ModalExample { get; set; }
     }
 }

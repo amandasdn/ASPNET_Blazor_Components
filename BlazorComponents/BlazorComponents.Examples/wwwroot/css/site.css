@@ -178,7 +178,8 @@ app {
 .main {
   flex: 1;
   padding-top: 70px;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  margin-bottom: 14px; }
   .main .content {
     padding: 0 !important; }
   .main .top-row {
@@ -353,6 +354,18 @@ ul.nav li.nav-item i[class^=fa] {
 .purple {
   color: #3b044c; }
 
+.display-block {
+  display: block; }
+
+.display-inline {
+  display: inline; }
+
+.display-inline-block {
+  display: inline-block; }
+
+.strong {
+  font-weight: 600; }
+
 .btn-component {
   font-family: "Lato";
   display: inline-block;
@@ -494,26 +507,43 @@ code {
   border-radius: 3px;
   margin-bottom: 15px; }
 
-*[class*=field-] label {
+fieldset[class*=field-] label {
   font-size: 10px;
   color: #a06cb0;
   text-transform: uppercase;
   margin-bottom: 3px;
   display: block;
   width: 100%; }
-  *[class*=field-] label.purple {
+  fieldset[class*=field-] label.purple {
     color: #3b044c; }
 
-*[class*=field-] input {
+fieldset[class*=field-] input {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
   padding: 8px 10px;
   border-radius: 0;
   border: 1px solid #d2d2d2; }
-  *[class*=field-] input:focus {
+  fieldset[class*=field-] input:focus {
     outline: none;
     border-color: #ba85cb; }
+
+fieldset[class*=field-].field-checkbox {
+  width: 220px; }
+  fieldset[class*=field-].field-checkbox input {
+    width: 15%;
+    min-width: unset;
+    float: left;
+    height: 16px;
+    margin-top: 2px; }
+  fieldset[class*=field-].field-checkbox label {
+    float: right;
+    width: 85%;
+    font-size: 14px;
+    text-transform: none;
+    color: #111;
+    margin: 0;
+    padding-left: 10px; }
 
 .preview-box {
   position: relative;

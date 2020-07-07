@@ -62,6 +62,7 @@ app {
   flex: 1;
   padding-top: $topbar-height;
   background-color: $color-gray-light;
+  margin-bottom: 14px;
 
   .content {
     padding: 0 !important;
@@ -318,6 +319,22 @@ ul.nav {
   color: $color-purple;
 }
 
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.strong {
+  font-weight: 600;
+}
+
 // ====================================================================
 // Others
 
@@ -388,7 +405,7 @@ code {
   margin-bottom: 15px;
 }
 
-*[class*=field-] {
+fieldset[class*=field-] {
   label {
     font-size: 10px;
     color: lighten(desaturate($color-purple, 60%), 40%);
@@ -413,6 +430,28 @@ code {
     &:focus {
       outline: none;
       border-color: lighten(desaturate($color-purple, 50%), 50%);
+    }
+  }
+
+  &.field-checkbox {
+    width: 220px;
+
+    input {
+      width: 15%;
+      min-width: unset;
+      float: left;
+      height: 16px;
+      margin-top: 2px;
+    }
+
+    label {
+      float: right;
+      width: 85%;
+      font-size: 14px;
+      text-transform: none;
+      color: #111;
+      margin: 0;
+      padding-left: 10px;
     }
   }
 }

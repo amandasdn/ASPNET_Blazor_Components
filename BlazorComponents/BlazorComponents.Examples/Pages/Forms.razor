@@ -25,10 +25,8 @@
 <div class="preview-box">
     <h2>FieldNumber</h2>
 
-    <SectionBox>
-        <div class="row">
-            <FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" />
-        </div>
+    <SectionBox HasBox="true">
+        <FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" @bind-Value="PersonObj.Age" />
     </SectionBox>
 
     <CodeBox>
@@ -45,10 +43,8 @@
 <div class="preview-box">
     <h2>FieldDate</h2>
 
-    <SectionBox>
-        <div class="row">
-            <FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="@nameof(PersonObj.Birthday)" @bind-Value="PersonObj.Birthday" />
-        </div>
+    <SectionBox HasRow="true">
+        <FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="@nameof(PersonObj.Birthday)" @bind-Value="PersonObj.Birthday" />
     </SectionBox>
 
     <CodeBox>
@@ -57,6 +53,25 @@
         ValueType="DateTime"
         Label="&#64;nameof(Obj.Property)"
         &#64;bind-Value="Obj.Name" Col="12" /&gt;
+    </CodeBox>
+
+    <div class="clearfix" />
+</div>
+
+<div class="preview-box">
+    <h2>FieldCheckbox</h2>
+
+    <SectionBox>
+        <FieldCheckbox Model="PersonExample" Label="@nameof(PersonObj.IsProgrammer)" Display="inline-block" @bind-Value="PersonObj.IsProgrammer" />
+        <FieldCheckbox Model="PersonExample" Label="@nameof(PersonObj.IsActive)" Display="inline-block" @bind-Value="PersonObj.IsActive" />
+    </SectionBox>
+
+    <CodeBox>
+        &lt;FieldCheckbox
+        Model="ModelName"
+        Label="&#64;nameof(Obj.Property)"
+        Display="inline-block"
+        &#64;bind-Value="Obj.Name" /&gt;
     </CodeBox>
 
     <div class="clearfix" />
