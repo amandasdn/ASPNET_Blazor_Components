@@ -55,6 +55,7 @@
         IconRegular="false"
         CssClass="additional-class"
         Disabled="false"
+        OnClick="{EventCallback}"
         /&gt;
     </CodeBox>
 
@@ -73,7 +74,17 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;Modal&gt; <br />
+        &lt;Button
+        Text="Open modal"
+        Color="pink"
+        OnClick="(() => ModalObject.ToggleModal())"
+        /&gt;
+        <br /> <br />
+        &lt;Modal
+        &#64;ref="ModalObject"
+        Title="Modal Title"
+        CloseOnClickButton="true"
+        CloseOnClickOut="true"&gt; <br />
         &nbsp; &nbsp; Content <br />
         &lt;/Modal&gt;
     </CodeBox>

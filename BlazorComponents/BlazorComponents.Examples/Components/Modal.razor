@@ -2,7 +2,7 @@
     Modal
 *@
 
-@inject IJSRuntime JsRunTime;
+@inject IJSRuntime JsRuntime;
 
 @if (!Hidden)
 {
@@ -54,7 +54,7 @@
     {
         Hidden = !Hidden;
 
-        // call js to lock scroll body
+        await JsRuntime.InvokeVoidAsync("lockScrollBody", Hidden);
     }
 
 }

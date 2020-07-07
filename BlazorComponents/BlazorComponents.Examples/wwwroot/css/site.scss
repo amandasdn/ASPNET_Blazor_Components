@@ -9,6 +9,10 @@
 
 html, body {
   font-family: $font-montserrat;
+
+  &.scroll-locked {
+    overflow: hidden;
+  }
 }
 
 *[class^=col-]{

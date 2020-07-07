@@ -140,6 +140,8 @@
 
 html, body {
   font-family: "Montserrat"; }
+  html.scroll-locked, body.scroll-locked {
+    overflow: hidden; }
 
 *[class^=col-] {
   float: left; }
