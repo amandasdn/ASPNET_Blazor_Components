@@ -2,7 +2,7 @@
     Section Box
 *@
 
-<section class="section-content col-md-@Col">
+<section class="section-content col-md-@Col @CssClass">
     <div class="@(HasBox ? "section-box" : "")">
 
         <div class="@(HasRow ? "row" : "")">
@@ -21,5 +21,7 @@
 
     [Parameter] public bool HasBox { get; set; } = true;
     [Parameter] public bool HasRow { get; set; }
+
+    [Parameter] public string CssClass { get; set; }
 
 }

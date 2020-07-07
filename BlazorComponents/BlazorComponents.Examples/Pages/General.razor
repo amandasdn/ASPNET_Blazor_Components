@@ -1,4 +1,5 @@
 ﻿@page "/general"
+@inherits GeneralModel
 @using BlazorComponents.Examples.Components
 
 <TitlePage>General</TitlePage>
@@ -64,7 +65,11 @@
     <h2>Modal</h2>
 
     <SectionBox>
-        <Button Text="Open modal" Color="pink" />
+        <Button Text="Open modal" Color="pink" OnClick="(() => ModalExample.ToggleModal())"/>
+
+        <Modal @ref="ModalExample" Title="Título do Modal" CloseOnClickButton="true" CloseOnClickOut="true">
+            Teste de conteúdo.
+        </Modal>
     </SectionBox>
 
     <CodeBox>

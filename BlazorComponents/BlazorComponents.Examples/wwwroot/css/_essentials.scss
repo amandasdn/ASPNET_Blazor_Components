@@ -131,3 +131,53 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+// ==========================================================================
+// Keyframes
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(key-pulse) {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  1% {
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  45% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+
+  80% {
+    -webkit-transform: scale(.95);
+    transform: scale(.95)
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
