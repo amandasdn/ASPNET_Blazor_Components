@@ -20,6 +20,9 @@ namespace BlazorComponents.Examples.Pages
             [Display(Name = "Data de Nascimento")]
             public DateTime Birthday { get; set; }
 
+            [Display(Name = "Gênero")]
+            public string Gender { get; set; }
+
             [Display(Name = "Ativo")]
             public bool IsActive { get; set; }
 
@@ -33,6 +36,7 @@ namespace BlazorComponents.Examples.Pages
             Surname = "Nascimento",
             Age = (DateTime.Now.Year - 1999),
             Birthday = new DateTime(1999, 06, 20),
+            Gender = "f",
             IsActive = false,
             IsProgrammer = true
         };

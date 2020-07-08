@@ -13,10 +13,8 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldText
-        Model="ModelName"
-        Label="&#64;nameof(Obj.Property)"
-        &#64;bind-Value="Obj.Name" Col="12" /&gt;
+        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Name)" &#64;bind-Value="PersonObj.Name" /&gt;<br />
+        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Surname)" &#64;bind-Value="PersonObj.Surname" /&gt;
     </CodeBox>
 
     <div class="clearfix" />
@@ -30,11 +28,7 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldNumber
-        Model="ModelName"
-        ValueType="int"
-        Label="&#64;nameof(Obj.Property)"
-        &#64;bind-Value="Obj.Name" Col="12" /&gt;
+        &lt;FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="&#64;nameof(PersonObj.Age)" &#64;bind-Value="PersonObj.Age" /&gt;
     </CodeBox>
 
     <div class="clearfix" />
@@ -48,11 +42,7 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldDate
-        Model="ModelName"
-        ValueType="DateTime"
-        Label="&#64;nameof(Obj.Property)"
-        &#64;bind-Value="Obj.Name" Col="12" /&gt;
+        &lt;FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="&#64;nameof(PersonObj.Birthday)" &#64;bind-Value="PersonObj.Birthday" /&gt;
     </CodeBox>
 
     <div class="clearfix" />
@@ -67,11 +57,30 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldCheckbox
-        Model="ModelName"
-        Label="&#64;nameof(Obj.Property)"
-        Display="inline-block"
-        &#64;bind-Value="Obj.Name" /&gt;
+        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Display="inline-block" &#64;bind-Value="PersonObj.IsProgrammer" /&gt;<br/>
+        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Display="inline-block" &#64;bind-Value="PersonObj.IsActive" /&gt;
+    </CodeBox>
+
+    <div class="clearfix" />
+</div>
+
+<div class="preview-box">
+    <h2>FieldRadioGroup</h2>
+
+    <SectionBox>
+        <FieldRadioGroup Context="r" @bind-Value="PersonObj.Gender" Display="block">
+            <FieldRadioButton ContextGroup="@r" Label="Masculino" Value="m" />
+            <FieldRadioButton ContextGroup="@r" Label="Feminino" Value="f" />
+            <FieldRadioButton ContextGroup="@r" Label="Outro" Value="o" />
+        </FieldRadioGroup>
+    </SectionBox>
+
+    <CodeBox>
+        &lt;FieldRadioGroup Context="r" &#64;bind-Value="Obj.Gender" Display="block"&gt;<br />
+        &nbsp; &nbsp; &lt;FieldRadioButton ContextGroup="&#64;r" Label="Masculino" Value="m" /&gt;<br />
+        &nbsp; &nbsp; &lt;FieldRadioButton ContextGroup="&#64;r" Label="Feminino" Value="f" /&gt;<br />
+        &nbsp; &nbsp; &lt;FieldRadioButton ContextGroup="&#64;r" Label="Outro" Value="o" /&gt;<br />
+        &lt;FieldRadioGroup/&gt;
     </CodeBox>
 
     <div class="clearfix" />

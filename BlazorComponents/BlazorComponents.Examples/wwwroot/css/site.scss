@@ -433,8 +433,12 @@ fieldset[class*=field-] {
     }
   }
 
-  &.field-checkbox {
+  &.field-checkbox, &.field-radio {
     width: 220px;
+
+    &.display-block {
+      margin-bottom: 5px;
+    }
 
     input {
       width: 15%;
@@ -445,7 +449,7 @@ fieldset[class*=field-] {
     }
 
     label {
-      float: right;
+      // float: right;
       width: 85%;
       font-size: 14px;
       text-transform: none;
@@ -473,6 +477,10 @@ fieldset[class*=field-] {
     padding: 0 10px;
     z-index: 9;
     color: rgba($color-purple, .4);
+  }
+
+  &:last-child:after{
+    display: none;
   }
 
   h2 {

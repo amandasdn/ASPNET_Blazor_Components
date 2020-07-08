@@ -528,16 +528,17 @@ fieldset[class*=field-] input {
     outline: none;
     border-color: #ba85cb; }
 
-fieldset[class*=field-].field-checkbox {
+fieldset[class*=field-].field-checkbox, fieldset[class*=field-].field-radio {
   width: 220px; }
-  fieldset[class*=field-].field-checkbox input {
+  fieldset[class*=field-].field-checkbox.display-block, fieldset[class*=field-].field-radio.display-block {
+    margin-bottom: 5px; }
+  fieldset[class*=field-].field-checkbox input, fieldset[class*=field-].field-radio input {
     width: 15%;
     min-width: unset;
     float: left;
     height: 16px;
     margin-top: 2px; }
-  fieldset[class*=field-].field-checkbox label {
-    float: right;
+  fieldset[class*=field-].field-checkbox label, fieldset[class*=field-].field-radio label {
     width: 85%;
     font-size: 14px;
     text-transform: none;
@@ -561,6 +562,8 @@ fieldset[class*=field-].field-checkbox {
     padding: 0 10px;
     z-index: 9;
     color: rgba(59, 4, 76, 0.4); }
+  .preview-box:last-child:after {
+    display: none; }
   .preview-box h2 {
     font-size: 18px;
     color: #3b044c;
