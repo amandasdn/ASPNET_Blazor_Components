@@ -44,6 +44,18 @@
     </CodeBox>
 </PreviewBox>
 
+<PreviewBox Title="FieldCheckSwitch" SearchText="@SearchText">
+    <SectionBox>
+        <FieldCheckSwitch Model="PersonExample" Label="@nameof(PersonObj.IsProgrammer)" Value="@PersonObj.IsProgrammer" />
+        <FieldCheckSwitch Model="PersonExample" Label="@nameof(PersonObj.IsActive)" Value="@PersonObj.IsActive" />
+    </SectionBox>
+
+    <CodeBox>
+        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Value="PersonObj.IsProgrammer" /&gt; <br />
+        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Value="PersonObj.IsActive" /&gt;
+    </CodeBox>
+</PreviewBox>
+
 <PreviewBox Title="FieldCheckbox" SearchText="@SearchText">
     <SectionBox>
         <FieldCheckbox Model="PersonExample" Label="@nameof(PersonObj.IsProgrammer)" Display="inline-block" Value="@PersonObj.IsProgrammer" />

@@ -459,6 +459,80 @@ fieldset[class*=field-] {
     }
   }
 
+  &.field-checkswitch {
+    .f-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 22px;
+      margin-bottom: 0;
+
+      .switch {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .3s;
+        transition: .3s;
+        border-radius: 30px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 5px;
+          top: 3px;
+          background-color: #fff;
+          -webkit-transition: .4s;
+          transition: .4s;
+          border-radius: 30px;
+        }
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .switch {
+          background-color: $color-green;
+
+          &:before {
+            -webkit-transform: translateX(24px);
+            -ms-transform: translateX(24px);
+            transform: translateX(24px);
+          }
+        }
+
+        &:focus + .switch {
+          box-shadow: 0 0 1px $color-green;
+        }
+      }
+
+      & + .f-switch-label {
+        vertical-align: middle;
+        margin-left: 10px;
+        display: inline-block;
+        color: #111;
+        margin-bottom: 0;
+        cursor: pointer;
+        width: auto;
+        padding-top: 10px;
+      }
+    }
+
+    display: inline-block;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
   &.field-search {
     &:after {
       @include fa-content("\f002");
