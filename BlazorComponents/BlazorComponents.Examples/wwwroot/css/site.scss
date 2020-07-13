@@ -458,6 +458,17 @@ fieldset[class*=field-] {
       padding-left: 10px;
     }
   }
+
+  &.field-search {
+    &:after {
+      @include fa-content("\f002");
+      opacity: .4;
+      position: absolute;
+      right: 28px;
+      top: 9px;
+      color: $color-purple;
+    }
+  }
 }
 
 .preview-box {

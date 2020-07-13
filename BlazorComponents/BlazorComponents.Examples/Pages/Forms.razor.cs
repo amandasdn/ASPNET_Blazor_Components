@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace BlazorComponents.Examples.Pages
 {
@@ -40,5 +41,18 @@ namespace BlazorComponents.Examples.Pages
             IsActive = false,
             IsProgrammer = true
         };
+
+        public class Search
+        {
+            public string Value { get; set; }
+        }
+
+        public string SearchText { get; set; } = string.Empty;
+
+        public Task OnSearch(ChangeEventArgs arg)
+        {
+            SearchText = (string)arg.Value;
+            return Task.Run(() => InvokeAsync(StateHasChanged));
+        }
     }
 }

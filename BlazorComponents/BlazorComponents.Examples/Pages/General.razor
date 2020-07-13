@@ -4,9 +4,15 @@
 
 <TitlePage>General</TitlePage>
 
-<div class="preview-box">
-    <h2>SectionBox</h2>
+<div class="col-md-12 mb-3">
+    <fieldset class="field-input field-search">
+        <input @bind="SearchText" placeholder="Pesquisar componente..." type="text" />
+    </fieldset>
+</div>
 
+<div class="clearfix" />
+
+<PreviewBox Title="SectionBox" SearchText="@SearchText">
     <SectionBox Col="12" HasRow="false" HasBox="true">
         This is a section.
     </SectionBox>
@@ -16,13 +22,9 @@
         &nbsp; &nbsp; This is a section. <br />
         &lt;/SectionBox&gt;
     </CodeBox>
+</PreviewBox>
 
-    <div class="clearfix" />
-</div>
-
-<div class="preview-box">
-    <h2>Button</h2>
-
+<PreviewBox Title="Button" SearchText="@SearchText">
     <SectionBox>
         <Button Text="red" Color="red" />
         <Button Text="pink" Color="pink" />
@@ -58,13 +60,9 @@
         OnClick="{EventCallback}"
         /&gt;
     </CodeBox>
+</PreviewBox>
 
-    <div class="clearfix" />
-</div>
-
-<div class="preview-box">
-    <h2>Modal</h2>
-
+<PreviewBox Title="Modal" SearchText="@SearchText">
     <SectionBox>
         <Button Text="Open modal" Color="pink" OnClick="(() => ModalExample.ToggleModal())" />
 
@@ -84,6 +82,4 @@
         &nbsp; &nbsp; public Modal ModalObject { get; set; }<br />
         }
     </CodeBox>
-
-    <div class="clearfix" />
-</div>
+</PreviewBox>

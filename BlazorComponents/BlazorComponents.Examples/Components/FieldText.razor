@@ -4,7 +4,7 @@
 
 @typeparam Model
 
-<fieldset class="col-md-@Col field-input">
+<fieldset class="col-md-@Col field-input @CssClass">
 
     @if (!string.IsNullOrWhiteSpace(Label))
     {
@@ -49,5 +49,7 @@
     private bool isFocus;
 
     protected void ToggleFocus() => isFocus = !isFocus;
+
+    [Parameter] public string CssClass { get; set; }
 
 }
