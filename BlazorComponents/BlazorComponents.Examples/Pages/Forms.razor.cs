@@ -29,6 +29,9 @@ namespace BlazorComponents.Examples.Pages
 
             [Display(Name = "Programadora")]
             public bool IsProgrammer { get; set; }
+
+            [Display(Name = "Descrição")]
+            public string Description { get; set; }
         }
 
         public PersonExample PersonObj = new PersonExample
@@ -39,7 +42,8 @@ namespace BlazorComponents.Examples.Pages
             Birthday = new DateTime(1999, 06, 20),
             Gender = "f",
             IsActive = false,
-            IsProgrammer = true
+            IsProgrammer = true,
+            Description = "Hello, my name is Amanda.\n\nBye!"
         };
 
         public class Search

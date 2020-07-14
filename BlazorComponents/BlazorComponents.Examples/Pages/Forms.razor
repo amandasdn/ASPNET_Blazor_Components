@@ -19,8 +19,8 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Name)" Value="PersonObj.Name" /&gt;<br />
-        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Surname)" Value="PersonObj.Surname" /&gt;
+        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Name)" Value="&#64;PersonObj.Name" /&gt;<br />
+        &lt;FieldText Col="3" Model="PersonExample" Label="&#64;nameof(PersonObj.Surname)" Value="&#64;PersonObj.Surname" /&gt;
     </CodeBox>
 </PreviewBox>
 
@@ -30,7 +30,7 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="&#64;nameof(PersonObj.Age)" Value="PersonObj.Age" /&gt;
+        &lt;FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="&#64;nameof(PersonObj.Age)" Value="&#64;PersonObj.Age" /&gt;
     </CodeBox>
 </PreviewBox>
 
@@ -40,7 +40,7 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="&#64;nameof(PersonObj.Birthday)" Value="PersonObj.Birthday" /&gt;
+        &lt;FieldDate Col="3" Model="PersonExample" ValueType="DateTime" Label="&#64;nameof(PersonObj.Birthday)" Value="&#64;PersonObj.Birthday" /&gt;
     </CodeBox>
 </PreviewBox>
 
@@ -51,8 +51,8 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Value="PersonObj.IsProgrammer" /&gt; <br />
-        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Value="PersonObj.IsActive" /&gt;
+        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Value="&#64;PersonObj.IsProgrammer" /&gt; <br />
+        &lt;FieldCheckSwitch Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Value="&#64;PersonObj.IsActive" /&gt;
     </CodeBox>
 </PreviewBox>
 
@@ -63,8 +63,8 @@
     </SectionBox>
 
     <CodeBox>
-        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Display="inline-block" Value="PersonObj.IsProgrammer" /&gt;<br />
-        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Display="inline-block" Value="PersonObj.IsActive" /&gt;
+        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsProgrammer)" Display="inline-block" Value="&#64;PersonObj.IsProgrammer" /&gt;<br />
+        &lt;FieldCheckbox Model="PersonExample" Label="&#64;nameof(PersonObj.IsActive)" Display="inline-block" Value="&#64;PersonObj.IsActive" /&gt;
     </CodeBox>
 </PreviewBox>
 
@@ -83,5 +83,15 @@
         &nbsp; &nbsp; &lt;FieldRadioButton ContextGroup="&#64;r" Label="Feminino" Value="f" /&gt;<br />
         &nbsp; &nbsp; &lt;FieldRadioButton ContextGroup="&#64;r" Label="Outro" Value="o" /&gt;<br />
         &lt;/FieldRadioGroup&gt;
+    </CodeBox>
+</PreviewBox>
+
+<PreviewBox Title="FieldTextArea" SearchText="@SearchText">
+    <SectionBox HasRow="true">
+        <FieldTextArea Model="PersonExample" Label="@nameof(PersonObj.Description)" Value="@PersonObj.Description" />
+    </SectionBox>
+
+    <CodeBox>
+        &lt;FieldTextArea Model="PersonExample" Label="&#64;nameof(PersonObj.Description)" Value="&#64;PersonObj.Description" /&gt;
     </CodeBox>
 </PreviewBox>

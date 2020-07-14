@@ -518,16 +518,24 @@ fieldset[class*=field-] label {
   fieldset[class*=field-] label.purple {
     color: #3b044c; }
 
-fieldset[class*=field-] input {
+fieldset[class*=field-] input, fieldset[class*=field-] textarea {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
   padding: 8px 10px;
   border-radius: 0;
   border: 1px solid #d2d2d2; }
-  fieldset[class*=field-] input:focus {
+  fieldset[class*=field-] input:focus, fieldset[class*=field-] textarea:focus {
     outline: none;
     border-color: #ba85cb; }
+
+fieldset[class*=field-] textarea {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  height: 150px;
+  max-height: 250px; }
 
 fieldset[class*=field-].field-checkbox, fieldset[class*=field-].field-radio {
   width: 220px; }

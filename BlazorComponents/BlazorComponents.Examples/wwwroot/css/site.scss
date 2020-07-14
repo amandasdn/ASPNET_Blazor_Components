@@ -419,7 +419,7 @@ fieldset[class*=field-] {
     }
   }
 
-  input {
+  input, textarea {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
@@ -431,6 +431,15 @@ fieldset[class*=field-] {
       outline: none;
       border-color: lighten(desaturate($color-purple, 50%), 50%);
     }
+  }
+
+  textarea {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    height: 150px;
+    max-height: 250px;
   }
 
   &.field-checkbox, &.field-radio {
