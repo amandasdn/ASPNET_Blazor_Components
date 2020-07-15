@@ -24,6 +24,22 @@
     </CodeBox>
 </PreviewBox>
 
+<PreviewBox Title="TabGroup" SearchText="@SearchText">
+    <SectionBox Col="12" HasRow="false" HasBox="true">
+        <TabGroup Context="t">
+            <TabLabel TabContext="@t" Title="Tab 1" Selected="true">
+                Content 1
+            </TabLabel>
+            <TabLabel TabContext="@t" Title="Tab 2">
+                Content 2
+            </TabLabel>
+            <TabLabel TabContext="@t" Title="Tab 3">
+                Content 3
+            </TabLabel>
+        </TabGroup>
+    </SectionBox>
+</PreviewBox>
+
 <PreviewBox Title="Button" SearchText="@SearchText">
     <SectionBox>
         <Button Text="red" Color="red" />
@@ -52,7 +68,7 @@
         &lt;Button
         Text="Name"
         Color="red"
-        Outline="none"
+        Outline="false"
         Icon="heart"
         IconRegular="false"
         CssClass="additional-class"

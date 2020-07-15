@@ -1,0 +1,36 @@
+﻿@*
+    Tab Label
+*@
+
+<li class="@CssClass @(_isActive ? "active" : "")">
+    <a @onclick="SetTabContent">
+        @Title
+    </a>
+</li>
+
+@code {
+
+    private ElementReference ElemRef = new ElementReference("tab-" + Guid.NewGuid());
+
+    [Parameter] public TabGroup TabContext { get; set; }
+
+    [Parameter] public string Title { get; set; }
+    [Parameter] public bool Selected { get; set; }
+    [Parameter] public string CssClass { get; set; }
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    private bool _isActive;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (string.IsNullOrEmpty(TabContext.TabSelected) && Selected)
+            await SetTabContent();
+    }
+
+    protected Task SetTabContent()
+    {
+        _isActive = true;
+        return TabContext.SetTab((ChildContent, TabContext.TabSelected));
+    }
+}

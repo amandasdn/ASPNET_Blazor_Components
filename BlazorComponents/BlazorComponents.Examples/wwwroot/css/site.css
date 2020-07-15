@@ -610,6 +610,9 @@ fieldset[class*=field-].field-checkswitch {
   fieldset[class*=field-].field-checkswitch:not(:last-child) {
     margin-right: 30px; }
 
+fieldset[class*=field-].field-search input {
+  padding-left: 40px; }
+
 fieldset[class*=field-].field-search:after {
   font-family: "Font Awesome 5 Free";
   content: "";
@@ -618,9 +621,10 @@ fieldset[class*=field-].field-search:after {
   font-weight: 900;
   opacity: .4;
   position: absolute;
-  right: 28px;
+  left: 28px;
   top: 9px;
-  color: #3b044c; }
+  color: #3b044c;
+  cursor: pointer; }
 
 .preview-box {
   position: relative;

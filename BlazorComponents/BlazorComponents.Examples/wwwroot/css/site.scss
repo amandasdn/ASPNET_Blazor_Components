@@ -543,13 +543,18 @@ fieldset[class*=field-] {
   }
 
   &.field-search {
+    input {
+      padding-left: 40px;
+    }
+
     &:after {
       @include fa-content("\f002");
       opacity: .4;
       position: absolute;
-      right: 28px;
+      left: 28px;
       top: 9px;
       color: $color-purple;
+      cursor: pointer;
     }
   }
 }
