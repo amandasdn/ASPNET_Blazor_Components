@@ -1,6 +1,6 @@
 ﻿@page "/forms"
 @inherits FormsModel
-@using BlazorComponents.Examples.Components;
+@using BlazorComponents.Components;
 
 <TitlePage>Forms</TitlePage>
 
@@ -25,7 +25,7 @@
 </PreviewBox>
 
 <PreviewBox Title="FieldNumber" SearchText="@SearchText">
-    <SectionBox HasBox="true">
+    <SectionBox HasRow="true">
         <FieldNumber Col="2" Model="PersonExample" ValueType="int" Label="@nameof(PersonObj.Age)" Value="@PersonObj.Age" />
     </SectionBox>
 

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorComponents.Examples.Components;
+using BlazorComponents.Components;
 
 namespace BlazorComponents.Examples.Pages
 {

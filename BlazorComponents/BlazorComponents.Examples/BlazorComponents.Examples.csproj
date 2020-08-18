@@ -12,4 +12,8 @@
     <None Include="compilerconfig.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorComponents.Components\BlazorComponents.Components.csproj" />
+  </ItemGroup>
+
 </Project>
