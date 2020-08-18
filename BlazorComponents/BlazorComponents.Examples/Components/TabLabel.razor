@@ -20,7 +20,7 @@
 
     [Parameter] public RenderFragment ChildContent { get; set; }
 
-    private bool _isActive;
+    private bool _isActive => TabContext.TabSelected == ElemRef.Id;
 
     protected override async Task OnInitializedAsync()
     {
@@ -28,9 +28,10 @@
             await SetTabContent();
     }
 
-    protected Task SetTabContent()
+    protected async Task SetTabContent()
     {
-        _isActive = true;
-        return TabContext.SetTab((ChildContent, TabContext.TabSelected));
+        // _isActive = true;
+        await TabContext.SetTab((ChildContent, ElemRef.Id));
+        await InvokeAsync(StateHasChanged);
     }
 }

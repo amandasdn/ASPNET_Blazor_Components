@@ -336,7 +336,7 @@ ul.nav {
 }
 
 // ====================================================================
-// Others
+// Buttons
 
 .btn-component {
   font-family: $font-lato;
@@ -383,6 +383,9 @@ ul.nav {
   }
 }
 
+// ====================================================================
+// Sections
+
 .section-content {
   padding: 15px;
   padding-top: 0;
@@ -396,6 +399,9 @@ ul.nav {
   }
 }
 
+// ====================================================================
+// <code>
+
 code {
   color: #111;
   background: rgba(0,0,0,.1);
@@ -404,6 +410,9 @@ code {
   border-radius: $border-radius;
   margin-bottom: 15px;
 }
+
+// ====================================================================
+// Inputs
 
 fieldset[class*=field-] {
   label {
@@ -559,6 +568,9 @@ fieldset[class*=field-] {
   }
 }
 
+// ====================================================================
+// Box de exemplo
+
 .preview-box {
   position: relative;
   border-bottom: 1px solid #fff;
@@ -602,6 +614,9 @@ fieldset[class*=field-] {
     }
   }
 }
+
+// ====================================================================
+// Modal
 
 .modal-box {
   position: fixed;
@@ -683,3 +698,44 @@ fieldset[class*=field-] {
     }
   }
 }
+
+// ====================================================================
+// Tabs
+
+.tab-group {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+
+    li {
+      display: inline-block;
+      padding-right: 5px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        border: 1px solid $color-blue;
+        background-color: $color-blue;
+        color: white !important;
+        padding: 8px 13px;
+        cursor: pointer;
+      }
+
+      &.active {
+        a, a:hover {
+          background-color: white;
+          color: $color-blue !important;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+// ====================================================================

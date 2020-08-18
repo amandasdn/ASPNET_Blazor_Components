@@ -721,3 +721,26 @@ fieldset[class*=field-].field-search:after {
         font-size: 1.2em; }
       .modal-box .section-modal > .section-box .modal-btn-close:hover {
         opacity: 1; }
+
+.tab-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px; }
+  .tab-group ul li {
+    display: inline-block;
+    padding-right: 5px; }
+    .tab-group ul li:last-child {
+      padding-right: 0; }
+    .tab-group ul li a {
+      text-transform: uppercase;
+      font-size: 12px;
+      border: 1px solid #4385f5;
+      background-color: #4385f5;
+      color: white !important;
+      padding: 8px 13px;
+      cursor: pointer; }
+    .tab-group ul li.active a, .tab-group ul li.active a:hover {
+      background-color: white;
+      color: #4385f5 !important;
+      cursor: default; }

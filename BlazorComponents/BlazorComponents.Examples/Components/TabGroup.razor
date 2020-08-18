@@ -24,10 +24,10 @@
 
     public RenderFragment ContentFromTab { get; set; }
 
-    public Task SetTab((RenderFragment tabContent, string id) tp)
+    public Task SetTab((RenderFragment tabContent, string id) tab)
     {
-        ContentFromTab = tp.tabContent;
-        TabSelected = tp.id;
+        ContentFromTab = tab.tabContent;
+        TabSelected = tab.id;
 
         return InvokeAsync(StateHasChanged);
     }
