@@ -11,3 +11,12 @@ function lockScrollBody(isHidden) {
 }
 
 // ====================================================================
+// Modal
+
+function setDataTable(elem) {
+    $(document).ready(function () {
+        $(elem).DataTable();
+    });
+}
+
+// ====================================================================
