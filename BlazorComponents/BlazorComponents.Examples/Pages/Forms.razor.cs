@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
@@ -32,6 +33,9 @@ namespace BlazorComponents.Examples.Pages
 
             [Display(Name = "Descrição")]
             public string Description { get; set; }
+
+            [Display(Name = "Cor Favorita")]
+            public string FavoriteColor { get; set; }
         }
 
         public PersonExample PersonObj = new PersonExample
@@ -43,7 +47,8 @@ namespace BlazorComponents.Examples.Pages
             Gender = "f",
             IsActive = false,
             IsProgrammer = true,
-            Description = "Hello, my name is Amanda.\n\nBye!"
+            Description = "Hello, my name is Amanda.\n\nBye!",
+            FavoriteColor = "Preto"
         };
 
         public class Search
@@ -58,5 +63,18 @@ namespace BlazorComponents.Examples.Pages
             SearchText = (string)arg.Value;
             return Task.Run(() => InvokeAsync(StateHasChanged));
         }
+
+        public Dictionary<int, string> Colors = new Dictionary<int, string>()
+        {
+            { 1, "Branco" },
+            { 2, "Preto" },
+            { 3, "Vermelho" },
+            { 4, "Laranja" },
+            { 5, "Amarelo" },
+            { 6, "Verde" },
+            { 7, "Azul" },
+            { 8, "Roxo" },
+            { 9, "Rosa" }
+        };
     }
 }

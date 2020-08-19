@@ -44,6 +44,16 @@
     </CodeBox>
 </PreviewBox>
 
+<PreviewBox Title="FieldSelect" SearchText="@SearchText">
+    <SectionBox HasRow="true">
+        <FieldSelect Col="4" Model="PersonExample" Label="@nameof(PersonObj.FavoriteColor)" Items="Colors" Value="@PersonObj.FavoriteColor" />
+    </SectionBox>
+
+    <CodeBox>
+        &lt;FieldSelect /&gt;
+    </CodeBox>
+</PreviewBox>
+
 <PreviewBox Title="FieldCheckSwitch" SearchText="@SearchText">
     <SectionBox>
         <FieldCheckSwitch Model="PersonExample" Label="@nameof(PersonObj.IsProgrammer)" Value="@PersonObj.IsProgrammer" />
